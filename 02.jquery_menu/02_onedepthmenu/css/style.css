@@ -1,0 +1,10 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+#wrap{margin: 100px auto; width: 300px;}
+#nav li{width: 113px; cursor: pointer;}
+#nav .menu_image{height: 0; overflow: hidden;/*  transition: .5s; */}
+/* #nav li:hover .menu_image{height: 97px;} */
+#nav .menu_image a img{height: 97px;}
+#nav .text_image{text-align: center; padding: 10px 0;}
+#nav .text_image .on{display: none;}

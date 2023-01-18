@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #222;}
+.hidden{display: block; overflow: hidden; width: 0;height: 0;line-height: 0;text-indent: -99999em;}
+.slide{width: 100%; height: 500px; position: relative; left: 0; top: 0; overflow: hidden;}
+.slide .slideUl{position: relative; width: 100%; height: 100%; top: 0; left: 0;}
+.slide .slideUl li{position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+.slide .slideUl li a{display: block; width: 100%; height: 100%;}
+.slide .slideUl .slide01{background: url(../img/keyVisual_0.jpg) no-repeat 50% 0;}
+.slide .slideUl .slide02{background: url(../img/keyVisual_1.jpg) no-repeat 50% 0; left: 100%;}
+.slide .slideUl .slide03{background: url(../img/keyVisual_2.jpg) no-repeat 50% 0; left: 200%;}
+
+.slide .arrowBtn{position: absolute; top: 50%; transform: translateY(-50%); width: 100%;}
+.slide .arrowBtn .prev{position: absolute; left: 100px; cursor: pointer;}
+.slide .arrowBtn .next{position: absolute; right: 100px; cursor: pointer;}
+.slide .pagerBtn{position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);}
+.slide .pagerBtn li{width: 15px; height: 15px; margin: 0 5px; border-radius: 50%; background: rgba(0,0,0,.3); float: left;}
+.slide .pagerBtn .on{background: rgba(0,0,0,1);}
+.slide .pagerBtn li a{display: block;}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로메뉴</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <style>
+        *{margin: 0; padding: 0; transition: .3s;}
+        a{color: #fff; text-decoration: none;}
+        body{width: 200px; margin: 20px auto; padding: 0; font-size: 13px;}
+        #nav{list-style: none;}
+        #nav>li{margin-bottom: 3px; text-align: center; line-height: 30px; color: #fff; text-decoration: none; background: #333; }
+        #nav>li>a{width: 100px; height: 30px; display: block;}/*  얘한테 높이를줘야 깔끔 */
+        #nav>li>ul{list-style: none;}
+        #nav>li>ul>li{height: 35px; background: rgb(33, 182, 107); margin-bottom: 2px;}
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li class="group">
+            <a href="#" class="title">Title 1</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+            </ul>
+        </li>
+        <li class="group">
+            <a href="#" class="title">Title 2</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+            </ul>
+        </li>
+        <li class="group">
+            <a href="#" class="title">Title 3</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+            </ul>
+        </li>
+        <li class="group">
+            <a href="#" class="title">Title 4</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub1</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        //자연스럽게 슬라이드
+        /* $('.sub').hide();
+        $('.title').click(function(e){
+            e.preventDefault();
+            $('.sub').slideUp(500);
+            $(this).next().stop().slideDown(500);
+        }); */
+
+        //클릭하면 다시 닫기
+       /*  $('.sub').hide();
+        $('.title').click(function(e){
+            e.preventDefault();
+            let th=$(this).next();
+            $('.sub').slideUp(500);
+            if(th.is(":visible")){
+                th.slideUp(500);
+            }else{
+                th.slideDown(500);
+            };
+        }); */
+        $('.sub').hide();
+        let subs=true;
+        $('.title').click(function(e){
+            e.preventDefault();
+            let th=$(this).next();
+            $('.sub').slideUp();
+            if(subs){
+                th.slideDown(); //참이면 열고 거짓으로 바꿈 (첫클릭엔 참이니까 무조건 열림)
+                subs=false;
+            }else{
+                th.slideUp();  //거짓이면 닫고 참으로 바꿈 (두번째클릭하면 거짓이니까 닫힘)
+                subs=true;
+            };
+        });
+       
+
+
+
+
+    </script>
+</body>
+</html>

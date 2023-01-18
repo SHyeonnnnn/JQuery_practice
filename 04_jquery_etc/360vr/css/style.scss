@@ -1,0 +1,22 @@
+#slideList{width: 500px; margin-left: 200px;
+    p{display: none; margin-left: 100px;
+        &:first-child{display: block;}
+    }
+}
+#slider{width: 500px; margin-left: 326px;}
+
+@for $i from 0 to 10{
+    #slideList{
+        p.img#{$i}{background-image: url(../slideImg/Picanto_Green_0000#{$i}.jpg); width: 600px; height: 400px;}
+    }
+}
+@for $j from 10 to 100{
+    #slideList{
+        p.img#{$j}{background-image: url(../slideImg/Picanto_Green_000#{$j}.jpg); width: 600px; height: 400px;}
+    }
+}
+@for $k from 100 to 120{
+    #slideList{
+        p.img#{$k}{background-image: url(../slideImg/Picanto_Green_00#{$k}.jpg); width: 600px; height: 400px;}
+    }
+}

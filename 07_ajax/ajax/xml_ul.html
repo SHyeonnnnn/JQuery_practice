@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xml데이터 불러오기</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <style>
+    </style>
+    <script>
+       
+    </script>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <script>
+        $.ajax({
+            url:"js/dataset.xml",
+            dataType:"xml",
+            success:function(data){
+                let $data=$(data).find('record');
+                if($data.length > 0){
+                    let $ul=$("<ul />");
+                    $.each($data,function(i, o){
+                        let $id=$(o).find('id').text();
+                        let $last_name=$(o).find('last_name').text();
+                        let $gender=$(o).find('gender').text();
+
+                        let row=$('<li />').append(
+                            $('<ul />').append(
+                                $('<li />').text($id),
+                                $('<li />').text($last_name),
+                                $('<li />').text($gender)
+                            )
+                        );
+                        $ul.append(row);
+                    });
+                    $('#box').append($ul);
+                };
+            }
+        });
+    </script>
+</body>
+</html>

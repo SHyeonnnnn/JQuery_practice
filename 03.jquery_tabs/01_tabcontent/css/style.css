@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black;}
+
+#all{width: 610px; margin: 50px auto;}
+.tabSet{padding: 3px; border: 2px solid rgb(159, 119, 17); margin-bottom: 5px;}
+.tabSet .tabs{display: flex;}
+.tabSet .tabs li{margin-right: 2px;}
+.tabSet .tabs li a{display: block; padding: 10px 15px; background: rgb(187, 174, 62);}
+.tabSet .tabs li a.on{background: rgb(240, 216, 7); color: #fff;}
+.tabSet .panels{position: relative; width: 100%; height: 100px; padding-top: 20px;/*  box-sizing: border-box;  */}
+/* .tabSet .panels .panel{position: absolute; display: none;}
+.tabSet .panels .panel:first-child{display: block;} */

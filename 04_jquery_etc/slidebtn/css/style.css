@@ -1,0 +1,7 @@
+*{margin: 0;padding: 0;}
+body{background: #000;}
+#wrap{width: 600px; margin: 100px auto; overflow: hidden;}
+.content{width: 2400px; height: 300px; position: relative;}
+.content img{display: block; width: 600px; height: 100%; float: left;}
+.scrollBar{width: 600px; height: 10px; background: rgb(126, 121, 121);}
+.box{margin-top: 5px; width: 30px; height: 10px; background: rgb(135, 106, 2);}

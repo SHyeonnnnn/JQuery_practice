@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeIn/fadeOut/fadeTo</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <script src="./js/fade.js" defer></script>
+    <style>
+        body{font-size: 5em;}
+        .container{height: 150px;}
+        .container>div{padding: 20px; box-sizing: border-box;}
+        #box1{background: rgb(218, 123, 139); display: none;}
+        #box2{background: rgb(150, 86, 97);}
+        #box3{background: rgb(160, 78, 92);}
+    </style>
+</head>
+<body>
+    <div class="container"><div id="box1">fadeIn Example</div></div>
+    <div class="container"><div id="box2">fadeOut Example</div></div>
+    <div class="container"><div id="box3">fadeTo Example</div></div>
+</body>
+</html>

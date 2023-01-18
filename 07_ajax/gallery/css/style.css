@@ -1,0 +1,11 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{color: #fff; text-decoration: none;}
+.page-main{width: 890px;margin: 0 auto; padding: 0 10px 100px; text-align: center;}
+.gallery li{float: left; animation: fadeIn 1s; margin-top: 10px; background: rgb(95, 152, 227); padding: 20px;}
+img{width: 250px;}
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.load-more{padding: 10px 20px; background: rgb(211, 123, 123); color: #fff; border: none; margin-top: 20px; cursor: pointer;}

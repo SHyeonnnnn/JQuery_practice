@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <script src="./js/value.js" defer></script>
+    <style>
+        form{width: 500px; margin: 50px auto;}
+        #textarea1{display: block; margin: 10px 0;}
+    </style>
+</head>
+<body>
+    <form action="#" method="post" name="form1">
+        <input type="text" id="input1" maxlength="40" value="텍스트 필드입니다.">
+        <textarea name="textarea" id="textarea1" cols="30" rows="10">텍스트영역입니다.</textarea>
+        <select name="select1" id="select1">
+            <option value="city1">서울</option>
+            <option value="city2">대전</option>
+            <option value="city3">부산</option>
+        </select>
+        <select name="select2" id="select2" multiple>
+            <option value="town1">동구</option>
+            <option value="town2">서구</option>
+            <option value="town3">중구</option>
+        </select>
+    </form>
+</body>
+</html>

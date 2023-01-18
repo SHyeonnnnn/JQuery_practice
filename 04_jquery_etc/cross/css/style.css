@@ -1,0 +1,8 @@
+*{margin: 0;padding: 0;}
+.box2{width: 100%; height: 450px; display: flex;}
+.banner01{position: relative; width: 30%; height: 100%; background: url(../img/1.jpg) no-repeat center center/cover;}
+.banner02{position: relative; width: 70%; height: 100%; background: url(../img/2.jpg) no-repeat center center/cover;}
+.top{width: 100%; height: 50%; position: absolute; top: 50%; left: 0; background-color: rgb(228, 166, 166);}
+.bottom{width: 100%; height: 50%; position: absolute; bottom: 50%; left: 0; background-color: rgb(228, 166, 166);;}
+.right{width: 50%; height: 100%; position: absolute; top: 0; left: 50%; background-color: rgb(96, 245, 38);}
+.left{width: 50%; height: 100%; position: absolute; top: 0; right: 50%; background-color: rgb(96, 245, 38);}

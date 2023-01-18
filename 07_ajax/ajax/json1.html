@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax_jason데이터 불러오기</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <style>
+        table{border: 1px solid #ddd; border-collapse: collapse;}
+        th,td{border: 1px solid #ddd; padding: 5px 10px;}
+    </style>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"js/MOCK_DATA.json",
+                dataType:"json",
+                success:function(data){
+                    // console.log(data);
+                    if(data.length>0){
+                        let table=$("<table />");
+                        for(let i in data){
+                            let $id=data[i].id;
+                            let $first_name=data[i].first_name;
+                            let $last_name=data[i].last_name;
+                            let $email=data[i].email;
+
+                            let row=$('<tr />').append(
+                                $('<td />').text($id),
+                                $('<td />').text($first_name),
+                                $('<td />').text($last_name),
+                                $('<td />').text($email)
+                            )
+                            table.append(row);
+                        }
+                        $('#wrap').append(table);
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap"></div>
+</body>
+</html>

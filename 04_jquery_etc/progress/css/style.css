@@ -1,0 +1,25 @@
+.progress-bar{
+    position: relative;
+    width: 1000px;
+    height: 30px;
+    margin: 3em auto;
+    border: 1px solid orchid;
+}
+.bar{
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    background: red;
+    width:0;
+
+}
+.num{
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 15px;
+   font-size: 1.1em;
+   color: #666;
+   line-height: 30px
+}
